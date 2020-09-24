@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${BROWSER}    chrome
 ${URL}   https://www.demoblaze.com
-${USER}  nayeem@jhgjkhdfg48768.com
+${USER}  nayeem@jhgjkhdfg45345.com
 ${PASS}  Payza123@
 
 
@@ -72,4 +72,4 @@ About Us and play video
     click element    xpath=//a[contains(text(),"About us")]
     Sleep    1s
     click element    xpath=//button[@title="Play Video"]
-    Sleep   3s
+    Sleep   4s
