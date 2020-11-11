@@ -4,9 +4,6 @@ Library     SeleniumLibrary
 Resource    ../Resources/LoginKeyword.robot
 Resource    ../Resources/Common.robot
 
-Library     SeleniumLibrary
-Resource    ../Resources/LoginKeyword.robot
-Resource    ../Resources/Common.robot
 
 *** Test Cases ***
 Test Login inValid Process
