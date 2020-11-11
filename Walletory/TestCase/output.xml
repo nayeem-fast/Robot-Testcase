@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201111 11:45:47.493" rpa="false">
+<suite id="s1" name="Signup" source="C:\Users\QA\PycharmProjects\pythonProject\TestCase\Signup.robot">
+<test id="s1-t1" name="Signup Invalid Process">
+<kw name="Start Browser and Maximize" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201111 11:45:47.696" level="INFO">Opening browser 'chrome' to base url 'https://test.walletory.com/account'.</msg>
+<status status="PASS" starttime="20201111 11:45:47.696" endtime="20201111 11:45:55.397"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201111 11:45:55.397" endtime="20201111 11:45:57.553"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:45:47.694" endtime="20201111 11:45:57.553"></status>
+</kw>
+<kw name="Signup1 link" library="SignupKeyword">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 11:45:59.559" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 11:45:57.553" endtime="20201111 11:45:59.559"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_link}</arg>
+</arguments>
+<msg timestamp="20201111 11:45:59.559" level="INFO">Clicking element 'xpath=//a[@id='kt_login_signup']'.</msg>
+<status status="PASS" starttime="20201111 11:45:59.559" endtime="20201111 11:45:59.617"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:45:57.553" endtime="20201111 11:45:59.617"></status>
+</kw>
+<kw name="Enter Email" library="SignupKeyword">
+<arguments>
+<arg>${email2}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_email}</arg>
+<arg>${username1}</arg>
+</arguments>
+<msg timestamp="20201111 11:45:59.619" level="INFO">Typing text 'nayeem5.com' into text field 'xpath=//input[@id='reg-email']'.</msg>
+<status status="PASS" starttime="20201111 11:45:59.619" endtime="20201111 11:45:59.720"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:45:59.617" endtime="20201111 11:45:59.722"></status>
+</kw>
+<kw name="Enter Password1" library="SignupKeyword">
+<arguments>
+<arg>${pwd1}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_password}</arg>
+<arg>${password1}</arg>
+</arguments>
+<msg timestamp="20201111 11:45:59.722" level="INFO">Typing text 'Payza123@' into text field 'xpath=//input[@id='reg-password']'.</msg>
+<status status="PASS" starttime="20201111 11:45:59.722" endtime="20201111 11:45:59.801"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:45:59.722" endtime="20201111 11:45:59.801"></status>
+</kw>
+<kw name="Enter Confirm Password" library="SignupKeyword">
+<arguments>
+<arg>${pwd1}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_confirm}</arg>
+<arg>${con_password}</arg>
+</arguments>
+<msg timestamp="20201111 11:45:59.803" level="INFO">Typing text 'Payza123@' into text field 'xpath=//input[@id='reg-password_confirmation']'.</msg>
+<status status="PASS" starttime="20201111 11:45:59.803" endtime="20201111 11:45:59.886"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:45:59.801" endtime="20201111 11:45:59.886"></status>
+</kw>
+<kw name="Click Checkbox" library="SignupKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${checkbox}</arg>
+</arguments>
+<msg timestamp="20201111 11:45:59.888" level="INFO">Clicking element 'xpath=//*[@id='reg-terms']/span'.</msg>
+<status status="PASS" starttime="20201111 11:45:59.888" endtime="20201111 11:45:59.930"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:45:59.888" endtime="20201111 11:45:59.930"></status>
+</kw>
+<kw name="Click Signup Btn" library="SignupKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_btn}</arg>
+</arguments>
+<msg timestamp="20201111 11:45:59.932" level="INFO">Clicking element 'xpath=//button[@id='kt_login_signup_submit']'.</msg>
+<status status="PASS" starttime="20201111 11:45:59.932" endtime="20201111 11:45:59.989"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:45:59.930" endtime="20201111 11:45:59.989"></status>
+</kw>
+<kw name="Verify error" library="SignupKeyword">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=//div[@id="reg-email-error"]</arg>
+<arg>Please enter a valid Email.</arg>
+</arguments>
+<msg timestamp="20201111 11:46:00.025" level="INFO">Element 'xpath=//div[@id="reg-email-error"]' contains text 'Please enter a valid Email.'.</msg>
+<status status="PASS" starttime="20201111 11:45:59.991" endtime="20201111 11:46:00.025"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Invalid Email Completed.</arg>
+</arguments>
+<status status="PASS" starttime="20201111 11:46:00.025" endtime="20201111 11:46:00.025"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:45:59.989" endtime="20201111 11:46:00.025"></status>
+</kw>
+<kw name="Close all" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201111 11:46:00.027" endtime="20201111 11:46:02.175"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:00.025" endtime="20201111 11:46:02.175"></status>
+</kw>
+<doc>This Test Case uses input inValid email</doc>
+<status status="PASS" starttime="20201111 11:45:47.694" endtime="20201111 11:46:02.177" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Signup Valid Process">
+<kw name="Start Browser and Maximize" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201111 11:46:02.178" level="INFO">Opening browser 'chrome' to base url 'https://test.walletory.com/account'.</msg>
+<status status="PASS" starttime="20201111 11:46:02.178" endtime="20201111 11:46:09.647"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201111 11:46:09.647" endtime="20201111 11:46:11.801"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:02.178" endtime="20201111 11:46:11.801"></status>
+</kw>
+<kw name="Signup1 link" library="SignupKeyword">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 11:46:13.815" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 11:46:11.801" endtime="20201111 11:46:13.815"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_link}</arg>
+</arguments>
+<msg timestamp="20201111 11:46:13.815" level="INFO">Clicking element 'xpath=//a[@id='kt_login_signup']'.</msg>
+<status status="PASS" starttime="20201111 11:46:13.815" endtime="20201111 11:46:13.871"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:11.801" endtime="20201111 11:46:13.871"></status>
+</kw>
+<kw name="Enter Email" library="SignupKeyword">
+<arguments>
+<arg>${email1}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_email}</arg>
+<arg>${username1}</arg>
+</arguments>
+<msg timestamp="20201111 11:46:13.873" level="INFO">Typing text 'nayeem900@gmail.com' into text field 'xpath=//input[@id='reg-email']'.</msg>
+<status status="PASS" starttime="20201111 11:46:13.873" endtime="20201111 11:46:13.983"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:13.871" endtime="20201111 11:46:13.983"></status>
+</kw>
+<kw name="Enter Password1" library="SignupKeyword">
+<arguments>
+<arg>${pwd1}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_password}</arg>
+<arg>${password1}</arg>
+</arguments>
+<msg timestamp="20201111 11:46:13.983" level="INFO">Typing text 'Payza123@' into text field 'xpath=//input[@id='reg-password']'.</msg>
+<status status="PASS" starttime="20201111 11:46:13.983" endtime="20201111 11:46:14.063"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:13.983" endtime="20201111 11:46:14.063"></status>
+</kw>
+<kw name="Enter Confirm Password" library="SignupKeyword">
+<arguments>
+<arg>${pwd1}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_confirm}</arg>
+<arg>${con_password}</arg>
+</arguments>
+<msg timestamp="20201111 11:46:14.065" level="INFO">Typing text 'Payza123@' into text field 'xpath=//input[@id='reg-password_confirmation']'.</msg>
+<status status="PASS" starttime="20201111 11:46:14.065" endtime="20201111 11:46:14.146"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:14.065" endtime="20201111 11:46:14.146"></status>
+</kw>
+<kw name="Click Checkbox" library="SignupKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${checkbox}</arg>
+</arguments>
+<msg timestamp="20201111 11:46:14.148" level="INFO">Clicking element 'xpath=//*[@id='reg-terms']/span'.</msg>
+<status status="PASS" starttime="20201111 11:46:14.148" endtime="20201111 11:46:14.187"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:14.148" endtime="20201111 11:46:14.187"></status>
+</kw>
+<kw name="Click Signup Btn" library="SignupKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${signup_btn}</arg>
+</arguments>
+<msg timestamp="20201111 11:46:14.189" level="INFO">Clicking element 'xpath=//button[@id='kt_login_signup_submit']'.</msg>
+<status status="PASS" starttime="20201111 11:46:14.189" endtime="20201111 11:46:14.255"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:14.189" endtime="20201111 11:46:14.255"></status>
+</kw>
+<kw name="Verify Valid" library="SignupKeyword">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Thank you. To complete your registration. Now you can login with you credential.</arg>
+</arguments>
+<status status="PASS" starttime="20201111 11:46:14.255" endtime="20201111 11:46:16.005"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Input valid info Completed.</arg>
+</arguments>
+<status status="PASS" starttime="20201111 11:46:16.005" endtime="20201111 11:46:16.005"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:14.255" endtime="20201111 11:46:16.005"></status>
+</kw>
+<kw name="Close all" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201111 11:46:16.007" endtime="20201111 11:46:18.158"></status>
+</kw>
+<status status="PASS" starttime="20201111 11:46:16.005" endtime="20201111 11:46:18.158"></status>
+</kw>
+<doc>This Test Case uses input Valid data</doc>
+<status status="PASS" starttime="20201111 11:46:02.178" endtime="20201111 11:46:18.158" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201111 11:45:47.495" endtime="20201111 11:46:18.159"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Signup">Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
