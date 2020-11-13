@@ -32,5 +32,4 @@ Verify for Invalid
     log to console      Input Invalid Credential Completed.
 
 Verify for Valid
-    Wait Until Page Contains    Your credentials validated successfully.
     log to console      Input valid Credential Completed.
